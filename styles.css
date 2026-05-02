@@ -28,7 +28,7 @@
   background: #0d1410;
 }
 .lln-head h2 { margin: 0; font-size: 22px; letter-spacing: .2px; color: #00ff66; }
-.lln-head p  { margin: 2px 0 0; color: #a8c4ae; }
+.lln-head p  { margin: 2px 0 0; color: #b8c4be; }
 .lln-emoji   { font-size: 28px; }
 
 /* ── Controls area ── */
@@ -45,7 +45,7 @@
 
 .lln-buttons button {
   background: #1c2620;
-  color: #c8e6cc;
+  color: #d8e8d8;
   font-weight: 700;
   border: 1.5px solid #2e5038;
   padding: 10px 14px;
@@ -71,7 +71,7 @@
 /* Ghost = Auto-Flip toggle */
 .lln-buttons .ghost {
   background: #141414;
-  color: #a8c4ae;
+  color: #b8c4be;
   border-color: #2a3a2e;
 }
 .lln-buttons .ghost:hover {
@@ -82,7 +82,7 @@
 /* Warn = Reset */
 .lln-buttons .warn {
   background: #1a1f18;
-  color: #b8d4bc;
+  color: #d0dccf;
   border-color: #3a5540;
 }
 .lln-buttons .warn:hover {
@@ -104,7 +104,7 @@
   grid-template-columns: 140px 1fr auto;
   align-items: center;
   gap: 10px;
-  color: #a8c4ae;
+  color: #b8c4be;
 }
 .slider input { accent-color: var(--accent); }
 
@@ -156,8 +156,8 @@
   flex-direction: column;
   gap: 2px;
 }
-.lln-stats strong { font-size: 13px; color: #5cba7a; font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
-.lln-stats span   { font-size: 17px; color: #dff0e4; }
+.lln-stats strong { font-size: 13px; color: #66d97a; font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
+.lln-stats span   { font-size: 17px; color: #e8f4eb; font-weight: 500; }
 
 /* ── Chart area ── */
 .lln-chart { padding: 14px 18px; background: #0b0f0c; }
@@ -171,11 +171,11 @@
 .baseline { stroke: #2a5c38; stroke-dasharray: 6 6; opacity: .5; }
 .path     { fill: none; stroke: #00ff66; stroke-width: 2.5; }
 
-.legend { margin-top: 8px; color: #6a9070; font-size: 12px; display: flex; align-items: center; gap: 8px; }
+.legend { margin-top: 8px; color: #8ab898; font-size: 12px; display: flex; align-items: center; gap: 8px; font-weight: 500; }
 .legend .dot { width: 10px; height: 10px; border-radius: 50%; background: #00ff66; display: inline-block; }
 
 /* ── Footer ── */
-.lln-foot { padding: 10px 18px 16px; color: #6a9070; border-top: 1px solid #1e2a20; background: #0d1410; }
+.lln-foot { padding: 10px 18px 16px; color: #8ab898; border-top: 1px solid #1e2a20; background: #0d1410; }
 kbd { background: #1c2e20; color: #00ff66; padding: 2px 7px; border-radius: 6px; font-weight: 700; border: 1px solid #2e5038; }
 
 @media (max-width: 700px) {
