@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLN Random Coin Flip Simulator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="lln-wrap" style="--bg:#0a0f0a; --card:#111; --ink:#e8ffe8; --muted:#9fb5a3; --accent:#00ff66; --ring:rgba(0,255,102,.35); --soft:#222;">
+  <div class="lln-card">
+    <header class="lln-head">
+      <div class="lln-emoji">🎲</div>
+      <div>
+        <h2>Law of Large Numbers (LLN)</h2>
+        <p>Flip a coin, watch the math win. Convergence made visual.</p>
+      </div>
+    </header>
+
+    <section class="lln-controls">
+      <div class="lln-buttons">
+        <button data-flips="1">Flip 1</button>
+        <button data-flips="10">Flip 10</button>
+        <button data-flips="100">Flip 100</button>
+        <button id="autoBtn" class="ghost">Start Auto‑Flip</button>
+        <button id="resetBtn" class="warn">Reset</button>
+      </div>
+
+      <div class="lln-sliders">
+        <label class="slider">
+          <span>Heads Bias</span>
+          <input id="bias" type="range" min="0" max="100" value="50" />
+          <span id="biasVal">50% (fair)</span>
+        </label>
+
+        <label class="slider">
+          <span>Auto‑Flip Speed</span>
+          <input id="speed" type="range" min="10" max="400" value="120" />
+          <span id="speedVal">120 ms</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="lln-stats">
+      <div><strong>Total</strong><span id="total">0</span></div>
+      <div><strong>Heads</strong><span><span id="heads">0</span> · <span id="headsPct">0.00%</span></span></div>
+      <div><strong>Tails</strong><span><span id="tails">0</span> · <span id="tailsPct">0.00%</span></span></div>
+      <div><strong>Δ from 50%</strong><span id="delta">0.00%</span></div>
+      <div><strong>95% CI (p̂)</strong><span id="ci">–</span></div>
+    </section>
+
+    <section class="lln-chart">
+      <svg id="spark" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-label="Heads% over time">
+        <line x1="0" y1="100" x2="1000" y2="100" class="baseline"></line>
+        <path id="sparkPath" d="" class="path"></path>
+      </svg>
+      <div class="legend">
+        <span class="dot"></span> Heads% over time (last 200 steps) · baseline = 50%
+      </div>
+    </section>
+
+    <footer class="lln-foot">
+      <small>Tip: press <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> for Flip 1/10/100. Toggle Auto‑Flip to watch LLN kick in.</small>
+    </footer>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
